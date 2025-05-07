@@ -5,29 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Lab2"
         mc:Ignorable="d"
-        Title="WrapPanel" Height="300" Width="500">
-    <Grid Margin="30">
-        <WrapPanel>
-            <Label>Label</Label>
-            <TextBox>TextBox</TextBox>
-            <TextBox>TextBox</TextBox>
-            <TextBox>TextBox</TextBox>
-            <TextBox>TextBox</TextBox>
-            <TextBox>TextBox</TextBox>
-            <TextBox>TextBox</TextBox>
-            <TextBox>TextBox</TextBox>
-            <TextBox>TextBox</TextBox>
-
-            <Label>Label</Label>
-            <TextBox>TextBox</TextBox>
-            <TextBox>TextBox</TextBox>
-            <TextBox>TextBox</TextBox>
-            <TextBox>TextBox</TextBox>
-            <TextBox>TextBox</TextBox>
-            <TextBox>TextBox</TextBox>
-            <TextBox>TextBox</TextBox>
-            <TextBox>TextBox</TextBox>
-        </WrapPanel>
-        <Button HorizontalAlignment="Center" Margin="0,78,0,78" Width="74" Height="20">Button</Button>
-    </Grid>
+        Title="DockPanel" Height="300" Width="500">
+    <DockPanel LastChildFill="False">
+        <Label DockPanel.Dock="Top" HorizontalAlignment="Center">Label</Label>
+        <TextBox DockPanel.Dock="Left" Width="200">TextBox</TextBox>
+        <TextBox DockPanel.Dock="Right" Width="200">TextBox</TextBox>
+        <Button DockPanel.Dock="Bottom" Height="25" Width="80" Margin="0 0 0 40">Button</Button>
+    </DockPanel>
 </Window>
