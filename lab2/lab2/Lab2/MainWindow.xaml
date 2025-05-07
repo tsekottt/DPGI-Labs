@@ -24,33 +24,38 @@
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
-        <Border Grid.Row="0" BorderBrush="#FFCBBEBE" BorderThickness="2" CornerRadius="10"
-                Background="{StaticResource LinearPanelBrush}">
-            <StackPanel Grid.Row="0" Orientation="Horizontal">
-                <Button Width="50" Height="50">
+        <Border Grid.Row="0" BorderBrush="#FFCBBEBE" BorderThickness="2" CornerRadius="10">
+            <StackPanel Grid.Row="0" Orientation="Horizontal"  Background="{StaticResource LinearPanelBrush}">
+                <Button Width="50" Height="50" Command="Open">
                     <Image ToolTip="Open" Source="/images/open.png"/>
                 </Button>
-                <Button Width="50" Height="50">
+                <Button Width="50" Height="50" Command="Close">
                     <Image ToolTip="Erase" Source="/images/clear.png"/>
                 </Button>
-                <Button Width="50" Height="50">
+                <Button Width="50" Height="50" Command="Copy">
                     <Image ToolTip="Copy" Source="/images/copy.png"/>
                 </Button>
-                <Button Width="50" Height="50">
+                <Button Width="50" Height="50" Command="Paste">
                     <Image ToolTip="Insert" Source="/images/paste.png"/>
                 </Button>
             </StackPanel>
         </Border>
-        <Border Grid.Row="1" BorderBrush="#FFCBBEBE" BorderThickness="2" CornerRadius="10"
-                Background="{StaticResource LinearPanelBrush}">
-            <Grid>
+        <Border Grid.Row="1" BorderBrush="#FFCBBEBE" BorderThickness="2" CornerRadius="10">
+            <Grid Background="{StaticResource LinearPanelBrush}">
                 <Grid.RowDefinitions>
                     <RowDefinition></RowDefinition>
                     <RowDefinition Height="Auto"></RowDefinition>
                 </Grid.RowDefinitions>
-                <TextBox Grid.Row="0" Margin="10" VerticalScrollBarVisibility="Visible"></TextBox>
+                <TextBox x:Name="inputTextBox" Grid.Row="0" Margin="10"
+                    VerticalScrollBarVisibility="Visible"
+                    FontSize="{Binding ElementName=fontSlider,
+                    Path=Value,
+                    UpdateSourceTrigger=PropertyChanged}"
+                    ></TextBox>
                 <DockPanel Grid.Row="1" Margin="10">
-                    <Button DockPanel.Dock="Bottom" Width="30">OK</Button>
+                    <Label>Розмір шрифту:</Label>
+                    <Slider Margin="4" MinWidth="100" Name="fontSlider" Maximum="100" Minimum="12"></Slider>
+                    <Button DockPanel.Dock="Bottom" Width="30" Style="{x:Null}" ToolTip="Save" Command="Save">OK</Button>
                 </DockPanel>
             </Grid>
         </Border>
