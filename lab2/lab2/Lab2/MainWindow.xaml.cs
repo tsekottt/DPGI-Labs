@@ -29,7 +29,7 @@ namespace Lab2
 
         private void execute_Save(object sender, ExecutedRoutedEventArgs e)
         {
-            string filePath = "text.txt"; // зберігаємо у корінь програми
+            string filePath = "text.txt";
             try
             {
                 File.WriteAllText(filePath, inputTextBox.Text);
