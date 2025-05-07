@@ -1,0 +1,19 @@
+﻿<Window x:Class="Lab3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Хрестики-нулики" Height="350" Width="350">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <UniformGrid Rows="3" Columns="3" Name="GameGrid" Grid.Row="0" Margin="5">
+        </UniformGrid>
+
+        <StackPanel Orientation="Vertical" Grid.Row="1" Margin="0,10,0,0" HorizontalAlignment="Center">
+            <TextBlock Name="statusText" FontSize="16" FontWeight="Bold" TextAlignment="Center" Margin="0,0,0,5"/>
+            <Button Content="Нова гра" Width="100" Click="RestartGame"/>
+        </StackPanel>
+    </Grid>
+</Window>
