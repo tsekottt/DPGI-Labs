@@ -5,16 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Lab2"
         mc:Ignorable="d"
-        Title="StackPanel" Height="450" Width="600">
-    <StackPanel Margin="80">
-        <Label HorizontalAlignment="Center">Label</Label>
+        Title="WrapPanel" Height="300" Width="500">
+    <Grid Margin="30">
+        <WrapPanel>
+            <Label>Label</Label>
+            <TextBox>TextBox</TextBox>
+            <TextBox>TextBox</TextBox>
+            <TextBox>TextBox</TextBox>
+            <TextBox>TextBox</TextBox>
+            <TextBox>TextBox</TextBox>
+            <TextBox>TextBox</TextBox>
+            <TextBox>TextBox</TextBox>
+            <TextBox>TextBox</TextBox>
 
-        <TextBox>TextBox</TextBox>
-        <TextBox>TextBox</TextBox>
-        <TextBox>TextBox</TextBox>
-        <TextBox>TextBox</TextBox>
-
-        <Button Margin="40" Width="120">Button</Button>
-
-    </StackPanel>
+            <Label>Label</Label>
+            <TextBox>TextBox</TextBox>
+            <TextBox>TextBox</TextBox>
+            <TextBox>TextBox</TextBox>
+            <TextBox>TextBox</TextBox>
+            <TextBox>TextBox</TextBox>
+            <TextBox>TextBox</TextBox>
+            <TextBox>TextBox</TextBox>
+            <TextBox>TextBox</TextBox>
+        </WrapPanel>
+        <Button HorizontalAlignment="Center" Margin="0,78,0,78" Width="74" Height="20">Button</Button>
+    </Grid>
 </Window>
