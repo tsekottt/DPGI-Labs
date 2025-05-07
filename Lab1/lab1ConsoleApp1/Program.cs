@@ -9,7 +9,20 @@ class Program
     /// <param name="args">Аргументи командного рядка.</param>
     static void Main(string[] args)
     {
-        // Виводить повідомлення "Hello, World!" у консоль.
+        Hello.Greet();
+    }
+}
+
+/// <summary>
+/// Клас, який відповідає за виведення привітання.
+/// </summary>
+class Hello
+{
+    /// <summary>
+    /// Виводить повідомлення "Hello, World!" у консоль.
+    /// </summary>
+    public static void Greet()
+    {
         Console.WriteLine("Hello, World!");
     }
 }
